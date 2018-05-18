@@ -5,7 +5,9 @@
 apt-get update && apt-get upgrade -y && apt-get dist-upgrade -y
 
 # Necessary for installing Guest Additions
-apt-get install linux-headers-$(uname -r) -y
+# below command tends to work better to get Guest Additions than the Vbox built in img
+apt-get install virtualbox-guest-dkms
+# apt-get install linux-headers-$(uname -r) -y
 
 
 # --> Web
